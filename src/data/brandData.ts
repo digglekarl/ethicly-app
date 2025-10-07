@@ -1,7 +1,7 @@
 export interface Brand {
     id: string;
     name: string;
-    category: 'Clothing' | 'Tech' | 'Food and Drink' | 'Makeup' | 'Perfume';
+    category: 'Clothing' | 'Tech' | 'Food and Drink' | 'Makeup' | 'Perfume' | 'Financial Services';
     subcategory?: 'Supermarkets' | 'Fast Food' | 'Cafes' | 'Alcohol';
     logo: string;
 }
@@ -11,6 +11,7 @@ export const brands: Brand[] = [
     { id: 'fd1', name: 'Tesco', category: 'Food and Drink', subcategory: 'Supermarkets', logo: 'https://logo.clearbit.com/tesco.com' },
     { id: 'fd2', name: 'Sainsbury\'s', category: 'Food and Drink', subcategory: 'Supermarkets', logo: 'https://logo.clearbit.com/sainsburys.co.uk' },
     { id: 'fd3', name: 'Asda', category: 'Food and Drink', subcategory: 'Supermarkets', logo: 'https://logo.clearbit.com/asda.com' },
+    { id: 'fd4', name: 'Nestlé', category: 'Food and Drink', logo: 'https://logo.clearbit.com/nestle.com' },
 
     // Fast Food
     { id: 'fd7', name: 'McDonald\'s', category: 'Food and Drink', subcategory: 'Fast Food', logo: 'https://logo.clearbit.com/mcdonalds.com' },
@@ -31,11 +32,15 @@ export const brands: Brand[] = [
     { id: 'c1', name: 'H&M', category: 'Clothing', logo: 'https://logo.clearbit.com/hm.com' },
     { id: 'c2', name: 'Zara', category: 'Clothing', logo: 'https://logo.clearbit.com/zara.com' },
     { id: 'c3', name: 'Nike', category: 'Clothing', logo: 'https://logo.clearbit.com/nike.com' },
+    { id: 'c4', name: 'Shein', category: 'Clothing', logo: 'https://logo.clearbit.com/shein.com' },
 
     // Tech
     { id: 't1', name: 'Apple', category: 'Tech', logo: 'https://logo.clearbit.com/apple.com' },
     { id: 't2', name: 'Samsung', category: 'Tech', logo: 'https://logo.clearbit.com/samsung.com' },
     { id: 't3', name: 'Google', category: 'Tech', logo: 'https://logo.clearbit.com/google.com' },
+
+    // Financial Services
+    { id: 'fs1', name: 'Lloyds', category: 'Financial Services', logo: 'https://logo.clearbit.com/lloydsbank.com' },
 
     // Makeup
     { id: 'm1', name: 'Fenty Beauty', category: 'Makeup', logo: 'https://logo.clearbit.com/fentybeauty.com' },

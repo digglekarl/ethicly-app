@@ -12,16 +12,13 @@ import {
   ActivityIndicator,
   ScrollView,
   Alert,
-  Linking,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { getEthicalScore, getBoycotts } from '../api/groqSystemPrompt';
+import { getEthicalScore } from '../api/groqSystemPrompt';
 import useSearchStore, { EthicalScoreResponse } from '../store/searchStore';
 import { ethicalScoreSystemPrompt } from '../api/ethicalScoreSystemPrompt';
 import { ethicalScoreUserPrompt } from '../api/ethicalScoreUserPrompt';
-import { boycottSystemPrompt } from '../api/boycottSystemPrompt';
-import { boycottUserPrompt } from '../api/boycottUserPrompt';
 import { MovementCard, Movement } from '../components/MovementCard';
 import { COLORS } from '../styles/colors';
 
@@ -38,6 +35,7 @@ type RootStackParamList = {
   MerchantDetails: { merchant: { name: string; ethicalScore: EthicalScoreResponse; logo?: string } };
   EthicalPurchaseResults: { results: any[], searchTerm: string };
   ProductDetail: { product: { name: string; image: string; description: string } };
+  MovementDetails: { movementName: string };
   // Define other screens you navigate to from Home
 };
 
@@ -102,6 +100,25 @@ const trendingProducts = [
   }
 ];
 
+// Static boycott movements data - moved outside component to prevent re-creation
+const staticBoycottMovements: Movement[] = [
+  {
+    movement: "BDS Movement",
+    note: "Boycott, Divestment, Sanctions movement promoting Palestinian rights through non-violent pressure on Israel",
+    url: "https://bdsmovement.net"
+  },
+  {
+    movement: "Fair Tax / Tax Justice",
+    note: "Campaign for multinational corporations and wealthy individuals to pay their fair share of taxes",
+    url: "https://www.taxjustice.net"
+  },
+  {
+    movement: "Anti-Sweatshop Boycotts",
+    note: "Movement against exploitative labor practices in manufacturing, promoting worker rights and fair wages",
+    url: "https://www.cleanclothes.org"
+  }
+];
+
 const CompanyCard = ({ item, onPress }: { item: Company, onPress: () => void }) => (
     <TouchableOpacity style={styles.companyCard} onPress={onPress}>
         <Image source={{ uri: item.logo || 'https://via.placeholder.com/160' }} style={styles.companyImage} />
@@ -122,7 +139,7 @@ export default function HomeScreen({ navigation }: { navigation: HomeScreenNavig
   const [boycotts, setBoycotts] = useState<Movement[]>([]);
   const [ethicalCompanies, setEthicalCompanies] = useState<Company[]>(topEthicalCompanies);
   const [companiesLoading, setCompaniesLoading] = useState(true);
-  const [boycottsLoading, setBoycottsLoading] = useState(true);
+  const [boycottsLoading, setBoycottsLoading] = useState(false);
 
 
   // This hook will run every time the screen comes into focus.
@@ -166,62 +183,16 @@ export default function HomeScreen({ navigation }: { navigation: HomeScreenNavig
     setEthicalCompanies(companiesWithScores);
   }, [searchCache, addSearch]);
 
-  const fetchHomeData = useCallback(async () => {
-    try {
-      const boycottUser = boycottUserPrompt.replace('{numberOfMovements}', "3");
-      const prompt = `${boycottSystemPrompt}\n${boycottUser}`;
-      const rawResponse = await getBoycotts(prompt);
-      
-      let movementsData: Movement[] = [];
-      
-      try {
-        // First, try to parse the raw response as JSON directly
-        const parsed = JSON.parse(rawResponse);
-        if (Array.isArray(parsed)) {
-          movementsData = parsed;
-        } else if (parsed && Array.isArray(parsed.movements)) {
-          movementsData = parsed.movements;
-        }
-      } catch (e) {
-        // If direct parsing fails, look for a markdown-wrapped JSON object
-        const jsonMatch = rawResponse.match(/```json\s*([\s\S]*?)\s*```/);
-        if (jsonMatch && jsonMatch[1]) {
-          const parsed = JSON.parse(jsonMatch[1]);
-          if (Array.isArray(parsed)) {
-            movementsData = parsed;
-          } else if (parsed && Array.isArray(parsed.movements)) {
-            movementsData = parsed.movements;
-          }
-        }
-      }
-
-      if (movementsData.length > 0) {
-        setBoycotts(movementsData);
-      } else {
-        console.error("Could not parse boycott movements from the response.");
-        setBoycotts([]);
-      }
-
-    } catch (error) {
-      console.error("Failed to fetch boycott data", error);
-      setBoycotts([]);
-    }
-  }, []);
-
   useEffect(() => {
     const loadCompanies = async () => {
         setCompaniesLoading(true);
         await fetchScoresForTopCompanies();
         setCompaniesLoading(false);
     };
-    const loadBoycotts = async () => {
-        setBoycottsLoading(true);
-        await fetchHomeData();
-        setBoycottsLoading(false);
-    };
+    // Set static boycott movements
+    setBoycotts(staticBoycottMovements);
     loadCompanies();
-    loadBoycotts();
-  }, [fetchHomeData, fetchScoresForTopCompanies]);
+  }, [fetchScoresForTopCompanies]);
 
   const handleSearch = useCallback(async (term: string, logo?: string) => {
     if (!term) return;
@@ -254,11 +225,13 @@ export default function HomeScreen({ navigation }: { navigation: HomeScreenNavig
     }
   }, [navigation, searchCache, addSearch]);
 
-  // Top 3 most boycotted brands (Tesco, Starbucks, Nike)
+  // Top 5 most boycotted brands (Lloyds, McDonald's, Nestlé, Nike, Shein)
   const mostBoycottedBrands = [
-    brands.find(b => b.name === 'Tesco'),
-    brands.find(b => b.name === 'Starbucks'),
+    brands.find(b => b.name === 'Lloyds'),
+    brands.find(b => b.name === 'McDonald\'s'),
+    brands.find(b => b.name === 'Nestlé'),
     brands.find(b => b.name === 'Nike'),
+    brands.find(b => b.name === 'Shein'),
   ].filter(Boolean);
 
   const BoycottedBrandCard = ({ brand }: { brand: typeof brands[0] }) => {
@@ -334,7 +307,7 @@ export default function HomeScreen({ navigation }: { navigation: HomeScreenNavig
       />
 
       {/* Trending Products Section */}
-      <Text style={styles.sectionTitle}>top trending products</Text>
+      {/* <Text style={styles.sectionTitle}>top trending products</Text>
       <FlatList
         data={trendingProducts}
         renderItem={({ item }) => (
@@ -348,9 +321,9 @@ export default function HomeScreen({ navigation }: { navigation: HomeScreenNavig
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.horizontalList}
-      />
+      /> */}
 
-      <Text style={styles.sectionTitle}>top trending ethical companies</Text>
+      {/* <Text style={styles.sectionTitle}>top trending ethical companies</Text>
       {companiesLoading ? <ActivityIndicator style={styles.loader} /> : (
         <FlatList
             data={ethicalCompanies}
@@ -360,12 +333,12 @@ export default function HomeScreen({ navigation }: { navigation: HomeScreenNavig
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.horizontalList}
         />
-      )}
+      )} */}
 
       <Text style={styles.sectionTitle}>recent boycott movements</Text>
       {boycottsLoading ? <ActivityIndicator style={styles.loader} /> : (
         <View style={styles.movementsList}>
-            {boycotts.map(item => <MovementCard key={item.movement} item={item} onPress={() => Linking.openURL(item.url)} />)}
+            {boycotts.map(item => <MovementCard key={item.movement} item={item} onPress={() => navigation.navigate('MovementDetails', { movementName: item.movement })} />)}
         </View>
       )}
     </ScrollView>
@@ -488,32 +461,5 @@ const styles = StyleSheet.create({
   },
   movementsList: {
     paddingHorizontal: 20,
-  },
-  movementCard: {
-    flexDirection: 'row',
-    backgroundColor: COLORS.white,
-    borderRadius: 15,
-    padding: 15,
-    marginBottom: 15,
-    alignItems: 'center',
-  },
-  movementTextContainer: {
-    flex: 1,
-  },
-  movementCategory: {
-    fontSize: 14,
-    color: COLORS.sage,
-    fontWeight: '500',
-    marginBottom: 5,
-  },
-  movementTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 5,
-    color: COLORS.darkText,
-  },
-  movementDescription: {
-    fontSize: 14,
-    color: COLORS.sage,
   },
 });
