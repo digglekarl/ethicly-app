@@ -3,25 +3,31 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 import { COLORS } from '../styles/colors';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import allCategoriesData from '../data/all_categories.json';
+import { categories } from '../data/categories';
 
-// Optionally, you can add images for each category here or in the JSON
+// Category images mapping for the new categories
 const categoryImages: Record<string, string> = {
-  'Food and Drink': 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Fashion and Apparel': 'https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Beauty and Personal Care': 'https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Electronics': 'https://images.pexels.com/photos/4005593/pexels-photo-4005593.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Food & Drink': 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Fashion & Apparel': 'https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Personal Care & Beauty': 'https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Electronics & Tech': 'https://images.pexels.com/photos/4005593/pexels-photo-4005593.jpeg?auto=compress&cs=tinysrgb&w=200',
   'Household': 'https://images.pexels.com/photos/1259332/pexels-photo-1259332.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Toys and Games': 'https://images.pexels.com/photos/3661352/pexels-photo-3661352.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Sports and Fitness': 'https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'DIY and Hardware': 'https://images.pexels.com/photos/209230/pexels-photo-209230.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Baby and Child': 'https://images.pexels.com/photos/377058/pexels-photo-377058.jpeg?auto=compress&cs=tinysrgb&w=200',
-  'Health': 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Supermarkets & Retail': 'https://images.pexels.com/photos/2068975/pexels-photo-2068975.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Travel & Transport': 'https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Finance & Insurance': 'https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Energy & Utilities': 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Raw Materials & Industrial': 'https://images.pexels.com/photos/209230/pexels-photo-209230.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Property & Facilities': 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Arts, Culture & Leisure': 'https://images.pexels.com/photos/3661352/pexels-photo-3661352.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'E-commerce & Retail': 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Foodservice & Hospitality': 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=200',
+  'Automotive': 'https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=200',
 };
 
 type CategoryStackParamList = {
     CategoriesList: undefined;
-    CategoryDetails: { categoryName: string };
+    Subcategories: { categoryName: string };
+    CategoryDetails: { categoryName: string; subcategoryName: string };
 };
 
 type CategoriesScreenNavigationProp = NativeStackNavigationProp<
@@ -30,11 +36,11 @@ type CategoriesScreenNavigationProp = NativeStackNavigationProp<
 >;
 
 export default function CategoriesScreen({ navigation }: { navigation: CategoriesScreenNavigationProp }) {
-  const [categories, setCategories] = useState<any[]>([]);
+  const [categoryData, setCategoryData] = useState<any[]>([]);
 
   useEffect(() => {
-    // Load categories from JSON
-    setCategories(allCategoriesData);
+    // Load categories from categories.ts
+    setCategoryData(categories);
   }, []);
 
   return (
@@ -43,14 +49,14 @@ export default function CategoriesScreen({ navigation }: { navigation: Categorie
         <Text style={styles.header}>Categories</Text>
       </View>
       <FlatList
-        data={categories}
-        keyExtractor={item => item.category}
+        data={categoryData}
+        keyExtractor={item => item.name}
         numColumns={2}
         renderItem={({ item }) => (
-          <TouchableOpacity style={styles.categoryTile} onPress={() => navigation.navigate('CategoryDetails', { categoryName: item.category })}>
-            <Image source={{ uri: categoryImages[item.category] || categoryImages['Food and Drink'] }} style={styles.categoryImage} />
+          <TouchableOpacity style={styles.categoryTile} onPress={() => navigation.navigate('Subcategories', { categoryName: item.name })}>
+            <Image source={{ uri: categoryImages[item.name] || categoryImages['Food & Drink'] }} style={styles.categoryImage} />
             <View style={styles.categoryNameContainer}>
-                <Text style={styles.categoryName}>{item.category}</Text>
+                <Text style={styles.categoryName}>{item.name}</Text>
             </View>
           </TouchableOpacity>
         )}

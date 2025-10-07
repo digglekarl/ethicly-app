@@ -12,6 +12,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MerchantDetailsScreen from './src/screens/MerchantDetailsScreen';
 import CategoriesScreen from './src/screens/CategoriesScreen';
 import CategoryDetailsScreen from './src/screens/CategoryDetailsScreen';
+import SubcategoriesScreen from './src/screens/SubcategoriesScreen';
 import BrandDetailsScreen from './src/screens/BrandDetailsScreen';
 import BrandsScreen from './src/screens/BrandsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
@@ -43,7 +44,8 @@ export type RootStackParamList = {
   MerchantDetails: { merchant: { name: string; ethicalScore: EthicalScoreResponse | string; logo?: string; } };
   Categories: undefined;
   CategoriesList: undefined;
-  CategoryDetails: { categoryName: string };
+  Subcategories: { categoryName: string };
+  CategoryDetails: { categoryName: string; subcategoryName: string };
   EthicalPurchaseResults: { results: any[]; searchTerm: string };
   Home: undefined;
   Movements: undefined;
@@ -75,6 +77,7 @@ function CategoryStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="CategoriesList" component={CategoriesScreen} />
+      <Stack.Screen name="Subcategories" component={SubcategoriesScreen} />
       <Stack.Screen name="CategoryDetails" component={CategoryDetailsScreen} />
       <Stack.Screen name="MerchantDetails" component={MerchantDetailsScreen} />
       <Stack.Screen name="MovementDetails" component={MovementDetailsScreen} />
