@@ -1,0 +1,298 @@
+[
+    {
+        "category": "Food and Drink",
+        "subcategories": [
+            "Supermarkets",
+            "Fast Food",
+            "Cafes",
+            "Alcohol"
+        ],
+        "avoid": [
+            {
+                "company": "Tesco",
+                "reason": "Repeated labour rights violations in supply chain, high carbon footprint, and animal welfare concerns linked to meat sourcing.",
+                "alternative": {
+                    "company": "Waitrose",
+                    "reason": "Strong commitment to sustainable sourcing, higher animal welfare standards, and transparent labour policies."
+                }
+            },
+            {
+                "company": "McDonald's UK",
+                "reason": "Heavy reliance on intensive beef and chicken production contributing to deforestation and high greenhouse‑gas emissions; documented animal welfare issues.",
+                "alternative": {
+                    "company": "Greggs (Plant‑based range)",
+                    "reason": "Offers a growing plant‑based menu, sources ingredients from certified sustainable farms and has a public animal‑welfare policy."
+                }
+            },
+            {
+                "company": "Nestlé UK",
+                "reason": "Controversial water extraction practices, palm‑oil linked deforestation, and labour abuses in cocoa supply chain.",
+                "alternative": {
+                    "company": "Riverford Organic Farms",
+                    "reason": "UK‑based organic farm with regenerative agriculture practices, fair‑trade sourcing and low‑impact logistics."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Fashion and Apparel",
+        "avoid": [
+            {
+                "company": "Primark",
+                "reason": "Fast‑fashion model with low wages, unsafe factories, and high waste generation.",
+                "alternative": {
+                    "company": "People Tree",
+                    "reason": "Pioneer of fair‑trade and organic clothing, UK‑based design, transparent supply chain."
+                }
+            },
+            {
+                "company": "Boohoo",
+                "reason": "Widespread supply‑chain labour abuses uncovered in 2020, poor living‑wage compliance, and minimal environmental initiatives.",
+                "alternative": {
+                    "company": "Patagonia",
+                    "reason": "Commitment to fair labour, 1% for the Planet, and use of recycled, low‑impact materials."
+                }
+            },
+            {
+                "company": "ASOS",
+                "reason": "Inconsistent enforcement of supplier labour standards and sizeable carbon footprint from rapid‑turnover logistics.",
+                "alternative": {
+                    "company": "Boden",
+                    "reason": "UK‑based, produces locally, strong ethical sourcing policy and carbon‑neutral shipping."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Beauty and Personal Care",
+        "avoid": [
+            {
+                "company": "L'Oréal (UK brands such as Garnier, Maybelline)",
+                "reason": "Animal testing loopholes in some markets, supply‑chain pesticide use, and labour rights concerns in ingredient sourcing.",
+                "alternative": {
+                    "company": "Faith in Nature",
+                    "reason": "Vegan, cruelty‑free, uses sustainably sourced natural ingredients, and transparent supply chain."
+                }
+            },
+            {
+                "company": "Unilever (Dove, Axe, Vaseline)",
+                "reason": "Linked to palm‑oil deforestation, animal testing in some regions, and questionable labour practices in certain factories.",
+                "alternative": {
+                    "company": "Neal's Yard Remedies",
+                    "reason": "Organic, cruelty‑free, UK‑grown ingredients, and robust ethical sourcing standards."
+                }
+            },
+            {
+                "company": "The Body Shop (UK)",
+                "reason": "Despite early activism, recent reports show supply‑chain sourcing gaps and limited progress on plastic waste reduction.",
+                "alternative": {
+                    "company": "Evolve Organic Beauty",
+                    "reason": "Certified organic, plastic‑free packaging, cruelty‑free, and fully transparent ingredient sourcing."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Electronics",
+        "avoid": [
+            {
+                "company": "Apple (UK sales)",
+                "reason": "Supply‑chain labour abuses in China, high e‑waste generation, and limited right‑to‑repair options.",
+                "alternative": {
+                    "company": "Fairphone",
+                    "reason": "Modular design for repairability, conflict‑free minerals, and a transparent, fair‑labour supply chain."
+                }
+            },
+            {
+                "company": "Samsung (UK sales)",
+                "reason": "Documented child labour in mineral sourcing, significant carbon emissions, and limited recycling programmes.",
+                "alternative": {
+                    "company": "Dell (UK)",
+                    "reason": "Robust recycling scheme, commitments to using recycled plastics and responsible mineral sourcing."
+                }
+            },
+            {
+                "company": "Huawei (UK market)",
+                "reason": "Security and privacy concerns, links to forced labour in Xinjiang, and lack of independent ethical audits.",
+                "alternative": {
+                    "company": "Lenovo (UK) – with its “Green” line",
+                    "reason": "Publishes detailed sustainability reports, uses recycled materials, and has third‑party labour audits."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Household",
+        "avoid": [
+            {
+                "company": "Procter & Gamble (e.g., Ariel, Fairy)",
+                "reason": "Animal testing history, high plastic‑packaging waste, and supply‑chain labour rights issues.",
+                "alternative": {
+                    "company": "Ecover",
+                    "reason": "Plant‑based detergents, refill stations, biodegradable packaging, and strong ESG policies."
+                }
+            },
+            {
+                "company": "Unilever (e.g., Persil, Comfort)",
+                "reason": "Palm‑oil linked deforestation, animal testing loopholes, and mixed labour standards across suppliers.",
+                "alternative": {
+                    "company": "Method",
+                    "reason": "Uses recycled plastic, renewable energy in factories, and cruelty‑free formulations."
+                }
+            },
+            {
+                "company": "Colgate-Palmolive (UK)",
+                "reason": "Reliance on virgin plastic, accusations of water over‑extraction, and limited transparency on sourcing.",
+                "alternative": {
+                    "company": "EcoWorks",
+                    "reason": "Zero‑waste cleaning products, refillable containers, and carbon‑neutral manufacturing."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Toys and Games",
+        "avoid": [
+            {
+                "company": "Mattel (UK distribution)",
+                "reason": "Labor exploitation in overseas factories, use of non‑recyclable plastics, and safety recalls indicating quality control lapses.",
+                "alternative": {
+                    "company": "PlanToys",
+                    "reason": "Made from sustainable rubberwood, certified non‑toxic, and adheres to fair‑labour standards."
+                }
+            },
+            {
+                "company": "Hasbro (UK distribution)",
+                "reason": "Manufacturing in regions with poor worker safety records and high carbon emissions from plastic toys.",
+                "alternative": {
+                    "company": "Green Toys",
+                    "reason": "Products from 100 % recycled American plastics, low‑impact supply chain, and strict safety standards."
+                }
+            },
+            {
+                "company": "LEGO (UK sales) – despite improvements",
+                "reason": "Continues to rely on petroleum‑based plastics for many pieces and has faced criticism for limited recycling pathways.",
+                "alternative": {
+                    "company": "Miche (UK) – wooden building blocks",
+                    "reason": "Sustainably sourced FSC‑certified wood, biodegradable, and produced in Europe with fair‑labour practices."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Sports and Fitness",
+        "avoid": [
+            {
+                "company": "Nike (UK)",
+                "reason": "Historic sweatshop labour, ongoing concerns over factory conditions, and sizable carbon footprint from footwear production.",
+                "alternative": {
+                    "company": "Veja",
+                    "reason": "Uses organic cotton, wild rubber from fair‑trade sources, and transparent supply‑chain audits."
+                }
+            },
+            {
+                "company": "Adidas (UK)",
+                "reason": "Similar labour‑rights violations in Asian factories and reliance on virgin polyester derived from fossil fuels.",
+                "alternative": {
+                    "company": "Allbirds",
+                    "reason": "Carbon‑neutral shoes made from renewable materials and a publicly disclosed supply‑chain impact report."
+                }
+            },
+            {
+                "company": "Decathlon (UK stores)",
+                "reason": "Inconsistent enforcement of supplier labour standards and limited use of recycled materials in many product lines.",
+                "alternative": {
+                    "company": "Patagonia (sports apparel)",
+                    "reason": "Commitment to fair wages, recycled fabrics, and 1% for the Planet donations."
+                }
+            }
+        ]
+    },
+    {
+        "category": "DIY and Hardware",
+        "avoid": [
+            {
+                "company": "B&Q",
+                "reason": "Unsustainable timber sourcing, poor traceability of wood products, and limited recycling programmes for DIY waste.",
+                "alternative": {
+                    "company": "Woodwise (UK)",
+                    "reason": "Specialises in FSC‑certified timber, reclaimed wood, and offers a take‑back scheme for off‑cuts."
+                }
+            },
+            {
+                "company": "Wickes",
+                "reason": "Reliance on non‑certified plastics for fittings, inadequate supplier labour monitoring, and high carbon logistics.",
+                "alternative": {
+                    "company": "Eco‑Hardware (online UK retailer)",
+                    "reason": "Curates products made from recycled metal/plastic, supplies items with carbon‑offset shipping."
+                }
+            },
+            {
+                "company": "Homebase",
+                "reason": "Continued sale of low‑cost, high‑impact building materials with limited sustainability certifications.",
+                "alternative": {
+                    "company": "B&Q Sustainable Range (Eco‑Line)",
+                    "reason": "Dedicated product line featuring recycled, low‑VOC, and responsibly sourced materials."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Baby and Child",
+        "avoid": [
+            {
+                "company": "Pampers (Procter & Gamble UK)",
+                "reason": "Single‑use plastic waste, non‑biodegradable core, and supply‑chain labour concerns in diaper factories.",
+                "alternative": {
+                    "company": "Bambo Nature",
+                    "reason": "OEKO‑Tex certified, biodegradable core, and a transparent, fair‑labour supply chain."
+                }
+            },
+            {
+                "company": "Mothercare (UK)",
+                "reason": "Questionable sourcing of cotton garments, low wages in overseas factories, and limited product recyclability.",
+                "alternative": {
+                    "company": "JoJo Maman Bébé",
+                    "reason": "UK‑based design, uses organic cotton, and partners with ethical manufacturers."
+                }
+            },
+            {
+                "company": "Matalan (children’s clothing line)",
+                "reason": "Fast‑fashion pricing model tied to low wages, poor traceability of fabrics, and high textile waste.",
+                "alternative": {
+                    "company": "Frugi",
+                    "reason": "Organic, Fair‑trade certified children’s wear made in the UK with a low‑impact supply chain."
+                }
+            }
+        ]
+    },
+    {
+        "category": "Health",
+        "avoid": [
+            {
+                "company": "Boots UK",
+                "reason": "Animal testing on some product lines, reliance on non‑sustainable packaging, and mixed record on supplier labour standards.",
+                "alternative": {
+                    "company": "Holland & Barrett (ethical range)",
+                    "reason": "Offers a growing line of vegan, cruelty‑free supplements with recyclable packaging and audits for ethical sourcing."
+                }
+            },
+            {
+                "company": "GlaxoSmithKline (GSK) – UK",
+                "reason": "Historical controversies over drug pricing, allegations of clinical trial ethics breaches, and carbon‑intensive manufacturing.",
+                "alternative": {
+                    "company": "The Organic Pharmacy",
+                    "reason": "Produces plant‑based, cruelty‑free health products with transparent sourcing and carbon‑reduction commitments."
+                }
+            },
+            {
+                "company": "Tesco Health (pharmacy services)",
+                "reason": "Part of Tesco’s broader ethical challenges, low transparency on product sourcing, and high plastic medication packaging.",
+                "alternative": {
+                    "company": "Holland & Barrett (organic supplements)",
+                    "reason": "Committed to ethical sourcing, uses recyclable packaging, and provides third‑party verified product information."
+                }
+            }
+        ]
+    }
+]

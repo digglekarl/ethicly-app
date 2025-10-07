@@ -1,0 +1,1424 @@
+[
+  {
+    "Brand / Company": "Ades",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Ades is owned by Coca-Cola, which has faced allegations of over-extracting groundwater in India and environmental pollution from bottling plants."
+  },
+  {
+    "Brand / Company": "Adidas",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "Adidas has been linked to sourcing cotton from Xinjiang, China, where forced labor of Uyghur Muslims has been reported."
+  },
+  {
+    "Brand / Company": "Adidas",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Adidas has faced allegations of poor working conditions in factories abroad, including unsafe environments and wages below living standards."
+  },
+  {
+    "Brand / Company": "Aero",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Aero is under Nestlé, which has been implicated in child labor on cocoa farms in West Africa."
+  },
+  {
+    "Brand / Company": "After Eight",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "After Eight is also under Nestlé, linked to child labor, deforestation, and environmental violations in cocoa supply chains."
+  },
+  {
+    "Brand / Company": "Airbnb",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "Airbnb listed properties in Israeli settlements in occupied territories, benefiting settlement expansion."
+  },
+  {
+    "Brand / Company": "Aldi",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Retail",
+    "Reason": "Aldi sources meat from intensive livestock farms, where investigations have found overcrowding, lack of veterinary care, and inhumane slaughter practices. NGO reports have documented breaches of animal welfare standards in multiple supplier farms."
+  },
+  {
+    "Brand / Company": "Amazon",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Retail",
+    "Reason": "Amazon has sold products produced in Israeli settlements in occupied Palestinian territories, which are considered illegal under international law. Reports indicate that profits from these products support settlement expansion."
+  },
+  {
+    "Brand / Company": "Amazon UK",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Retail",
+    "Reason": "Amazon UK has been scrutinized for paying very low corporate taxes relative to its revenue, using profit-shifting strategies and complex tax structures that reduce its UK tax obligations. Investigations by UK media and parliamentary committees highlighted these practices."
+  },
+  {
+    "Brand / Company": "Amazon UK",
+    "Boycott / Campaign": "Boycott Amazon",
+    "Sector": "Retail",
+    "Reason": "Amazon has faced widespread criticism over unsafe warehouse conditions, including high injury rates, mandatory overtime, and limited breaks. Environmental concerns include high carbon footprint logistics and packaging waste, while anti-competition cases target its monopolistic practices."
+  },
+  {
+    "Brand / Company": "Apple",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Technology",
+    "Reason": "Apple’s supply chain in China has been linked to factories where Uyghur forced labor has been reported, including detention centers and “re-education” facilities. Human rights groups have documented coercion of Uyghur workers in electronics production."
+  },
+  {
+    "Brand / Company": "Apple",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Technology",
+    "Reason": "Apple has been criticized for labor abuses in factories run by suppliers such as Foxconn, including excessive overtime, underage labor, unsafe working conditions, and low wages that fail to meet local living standards."
+  },
+  {
+    "Brand / Company": "Apple UK",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Technology",
+    "Reason": "Apple has used tax arrangements in the UK and EU that drastically reduced its corporate tax payments. Investigations by the European Commission and UK authorities revealed complex profit-shifting and royalty arrangements to avoid taxes."
+  },
+  {
+    "Brand / Company": "Appletiser",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Appletiser is owned by Coca-Cola, which has been implicated in over-extraction of groundwater, pollution incidents, and controversies over labor practices in multiple countries. Specific campaigns highlight environmental violations and ethical concerns in sourcing."
+  },
+  {
+    "Brand / Company": "Aquarius",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Aquarius, part of Coca-Cola, is associated with the same documented cases of water exploitation, environmental contamination from bottling plants, and labor controversies linked to Coca-Cola operations globally."
+  },
+  {
+    "Brand / Company": "Arla Foods",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Arla has been investigated for using intensive dairy farming practices that include overcrowding, routine tail-docking, and limited veterinary care. Reports document violations of EU animal welfare regulations on multiple farms."
+  },
+  {
+    "Brand / Company": "Asda",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Retail",
+    "Reason": "Asda sources meat and dairy from industrial farms with documented animal welfare issues, including high mortality rates, poor living conditions, and inhumane slaughter practices. Investigations by animal rights organizations have provided photographic and video evidence."
+  },
+  {
+    "Brand / Company": "ASOS",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "ASOS has been linked to fast fashion practices including overproduction, reliance on low-cost labor in Bangladesh and Turkey, unsafe factory conditions, and failure to enforce environmental regulations in supply chains."
+  },
+  {
+    "Brand / Company": "Associated British Foods",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Retail",
+    "Reason": "Associated British Foods has been reported to source palm oil linked to deforestation, destruction of orangutan habitats, and human rights abuses on plantations, as documented by NGOs and environmental watchdogs."
+  },
+  {
+    "Brand / Company": "Audible",
+    "Boycott / Campaign": "Boycott Amazon",
+    "Sector": "Technology",
+    "Reason": "Audible is owned by Amazon, which has faced documented worker safety violations, union-busting activities, environmental concerns from high carbon logistics, and complaints over monopolistic practices."
+  },
+  {
+    "Brand / Company": "AXA",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Finance",
+    "Reason": "AXA has invested in companies operating in Israeli settlements in the occupied West Bank, which international organizations and human rights groups consider illegal under international law."
+  },
+  {
+    "Brand / Company": "Ayataka",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Ayataka is a Coca-Cola product; Coca-Cola has documented cases of groundwater depletion, pollution from bottling plants, and controversies over labor practices in supplier operations."
+  },
+  {
+    "Brand / Company": "Barclays",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "Barclays has financed fossil fuel projects with high carbon emissions, including coal and oil extraction operations, as documented by environmental NGOs and investigative reports."
+  },
+  {
+    "Brand / Company": "Barclays",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Finance",
+    "Reason": "Barclays has been criticized for using tax avoidance strategies such as profit shifting and offshore subsidiaries, reducing its UK tax payments despite substantial profits."
+  },
+  {
+    "Brand / Company": "Barny",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Barny products use packaging that contributes to plastic pollution; studies have documented its single-use wrappers as non-recyclable and frequently ending up in landfills or oceans."
+  },
+  {
+    "Brand / Company": "Barq’s",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Barq’s is a Coca-Cola brand; Coca-Cola has been documented to over-extract groundwater, cause environmental pollution, and face labor practice controversies."
+  },
+  {
+    "Brand / Company": "BelVita",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "BelVita uses packaging that is largely non-recyclable, contributing to measurable plastic waste accumulation and environmental degradation."
+  },
+  {
+    "Brand / Company": "BNP Paribas",
+    "Boycott / Campaign": "BankTrack Campaigns",
+    "Sector": "Finance",
+    "Reason": "BNP Paribas has financed projects associated with environmental destruction, human rights abuses, and controversial extractive industries, as documented by NGOs and investigative reports."
+  },
+  {
+    "Brand / Company": "Boohoo",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Boohoo has been linked to overproduction, unsustainable fast fashion practices, and reliance on factories with poor environmental and labor standards in the UK and abroad."
+  },
+  {
+    "Brand / Company": "Boohoo",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Boohoo has faced investigations revealing poor working conditions, underpayment, and unsafe factories in Leicester and supply chains abroad."
+  },
+  {
+    "Brand / Company": "Booking.com",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "Booking.com has listed properties in Israeli settlements in occupied Palestinian territories, considered illegal under international law, prompting BDS criticism."
+  },
+  {
+    "Brand / Company": "Boots",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Retail",
+    "Reason": "Boots has been scrutinized for using tax arrangements that reduce its UK corporate tax payments despite significant revenues."
+  },
+  {
+    "Brand / Company": "Boots No7",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Boots No7 has historically sold products tested on animals, including in markets where animal testing is required by law."
+  },
+  {
+    "Brand / Company": "BP",
+    "Boycott / Campaign": "Boycott Shell / Fossil Fuel Giants",
+    "Sector": "Industrial",
+    "Reason": "BP has been linked to major oil spills, including the Deepwater Horizon disaster, and is a significant contributor to global fossil fuel emissions."
+  },
+  {
+    "Brand / Company": "Buitoni",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Buitoni, owned by Nestlé, is associated with supply chain issues including unsafe food recalls and links to child labor in cocoa sourcing."
+  },
+  {
+    "Brand / Company": "Burger King",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Fast Food",
+    "Reason": "Burger King has been reported to source meat from industrial farms with documented animal welfare violations."
+  },
+  {
+    "Brand / Company": "Burger King",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Fast Food",
+    "Reason": "Burger King has faced criticism for operating in or sourcing products from Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Cadbury (Mondelez)",
+    "Boycott / Campaign": "Fair Chocolate / Stop Child Labour",
+    "Sector": "Food/Drink",
+    "Reason": "Cadbury, owned by Mondelez, has been linked to child labor in cocoa production in West Africa, including hazardous working conditions for children."
+  },
+  {
+    "Brand / Company": "Cadburys",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Cadbury products use non-recyclable wrappers that contribute to plastic pollution and waste accumulation."
+  },
+  {
+    "Brand / Company": "Carnation",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Carnation is a Nestlé brand, connected to documented issues including child labor in cocoa and unsafe food production practices."
+  },
+  {
+    "Brand / Company": "Caterpillar",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Industrial",
+    "Reason": "Caterpillar has supplied equipment used in Israeli settlements, which BDS campaigners consider contributing to occupation activities."
+  },
+  {
+    "Brand / Company": "CeraVe",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "CeraVe products have been tested on animals in certain markets, including where animal testing is mandated by law."
+  },
+  {
+    "Brand / Company": "Chevron",
+    "Boycott / Campaign": "Boycott Shell / Fossil Fuel Giants",
+    "Sector": "Industrial",
+    "Reason": "Chevron has been linked to environmental disasters such as oil spills in Ecuador and pollution in the Amazon, and is a major fossil fuel emitter."
+  },
+  {
+    "Brand / Company": "Chevron",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Industrial",
+    "Reason": "Chevron has investments or contracts associated with Israeli settlement projects, leading to BDS targeting."
+  },
+  {
+    "Brand / Company": "Chips Ahoy!",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Chips Ahoy! packaging uses non-recyclable plastic wrappers that contribute to environmental pollution."
+  },
+  {
+    "Brand / Company": "Cider",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Cider has been criticized for producing clothing under fast fashion practices, including unsustainable production and low labor standards."
+  },
+  {
+    "Brand / Company": "Ciel",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Ciel is a Coca-Cola brand; Coca-Cola has faced documented issues including water exploitation, pollution, and labor controversies."
+  },
+  {
+    "Brand / Company": "Coca-Cola",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Coca-Cola is the largest global producer of single-use plastic bottles, contributing to widespread environmental pollution."
+  },
+  {
+    "Brand / Company": "Coca-Cola",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Coca-Cola has faced criticism for water depletion in India, environmental violations, and labor rights issues in multiple countries."
+  },
+  {
+    "Brand / Company": "Coca-Cola Zero Sugar",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Coca-Cola Zero Sugar, like other Coca-Cola products, is linked to the company’s documented environmental and labor controversies."
+  },
+  {
+    "Brand / Company": "Colgate-Palmolive",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Colgate-Palmolive has sourced palm oil linked to deforestation, habitat destruction, and human rights abuses on plantations."
+  },
+  {
+    "Brand / Company": "Costa Coffee",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Costa Coffee uses single-use cups and packaging that contribute to measurable plastic pollution."
+  },
+  {
+    "Brand / Company": "Costa Coffee",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Costa Coffee was acquired by Coca-Cola; it is associated with Coca-Cola’s documented environmental and labor controversies."
+  },
+  {
+    "Brand / Company": "Cranswick",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Cranswick sources meat from industrial farms with documented animal welfare violations, including overcrowding and inhumane practices."
+  },
+  {
+    "Brand / Company": "Dell",
+    "Boycott / Campaign": "Congo Minerals Boycott",
+    "Sector": "Technology",
+    "Reason": "Dell has been linked to sourcing minerals from conflict zones in the Democratic Republic of Congo, where mining has been associated with human rights abuses and armed groups."
+  },
+  {
+    "Brand / Company": "Dell",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Technology",
+    "Reason": "Dell has been criticized for supplying technology to Israeli government or military institutions involved in occupied territories."
+  },
+  {
+    "Brand / Company": "Diet Coke",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Diet Coke is a Coca-Cola product linked to documented issues including water exploitation, environmental pollution, and labor concerns."
+  },
+  {
+    "Brand / Company": "Disney",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Entertainment",
+    "Reason": "Disney has faced documented labor abuses in overseas factories producing merchandise, including low wages, unsafe conditions, and child labor allegations."
+  },
+  {
+    "Brand / Company": "Disney",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Entertainment",
+    "Reason": "Disney has been criticized for operations or investments that indirectly support Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Dogadan",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Dogadan is a Coca-Cola brand; Coca-Cola has been linked to water exploitation, environmental violations, and labor controversies."
+  },
+  {
+    "Brand / Company": "Domino’s",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Fast Food",
+    "Reason": "Domino’s sources meat from industrial farms with documented animal welfare violations, including overcrowding and poor treatment."
+  },
+  {
+    "Brand / Company": "Domino's Pizza",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Fast Food",
+    "Reason": "Domino’s has been criticized for operating in or sourcing products from Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Elizabeth Arden",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Elizabeth Arden products have been tested on animals in markets where testing is legally required."
+  },
+  {
+    "Brand / Company": "Equinor",
+    "Boycott / Campaign": "Boycott Shell / Fossil Fuel Giants",
+    "Sector": "Industrial",
+    "Reason": "Equinor, formerly Statoil, has been involved in oil and gas extraction projects linked to environmental pollution and high carbon emissions."
+  },
+  {
+    "Brand / Company": "Estée Lauder (Clinique, MAC, Bobbi Brown, Aveeno)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Estée Lauder and its brands have been documented to sell products tested on animals, including in jurisdictions requiring animal testing."
+  },
+  {
+    "Brand / Company": "Expedia",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "Expedia has listed properties in Israeli settlements in occupied Palestinian territories, considered illegal under international law."
+  },
+  {
+    "Brand / Company": "ExxonMobil",
+    "Boycott / Campaign": "Boycott Shell / Fossil Fuel Giants",
+    "Sector": "Industrial",
+    "Reason": "ExxonMobil has been linked to major environmental incidents, including oil spills, and is a significant contributor to greenhouse gas emissions."
+  },
+  {
+    "Brand / Company": "Facebook",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Technology",
+    "Reason": "Facebook has been criticized for unethical labor practices in outsourced content moderation and supply chains, including unsafe working conditions."
+  },
+  {
+    "Brand / Company": "Fanta",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Fanta is a Coca-Cola product; Coca-Cola has been linked to documented environmental violations, water exploitation, and labor controversies."
+  },
+  {
+    "Brand / Company": "Fashion Nova",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Fashion Nova has been criticized for fast fashion practices, including overproduction, unsafe working conditions, and labor exploitation."
+  },
+  {
+    "Brand / Company": "Ferrero",
+    "Boycott / Campaign": "Fair Chocolate / Stop Child Labour",
+    "Sector": "Food/Drink",
+    "Reason": "Ferrero has been linked to child labor in cocoa production, including hazardous work conditions for children in West Africa."
+  },
+  {
+    "Brand / Company": "Fitness Cereal",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Fitness Cereal is owned by Nestlé, which has documented issues including child labor in cocoa sourcing and supply chain violations."
+  },
+  {
+    "Brand / Company": "Fresca",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Fresca is a Coca-Cola brand; Coca-Cola has documented controversies over environmental pollution, water depletion, and labor issues."
+  },
+  {
+    "Brand / Company": "Fuze Tea",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Fuze Tea is owned by Coca-Cola; the company has faced documented cases of water exploitation, pollution, and labor controversies."
+  },
+  {
+    "Brand / Company": "Galaxy / Mars",
+    "Boycott / Campaign": "Fair Chocolate / Stop Child Labour",
+    "Sector": "Food/Drink",
+    "Reason": "Mars, owner of Galaxy, has been linked to child labor in cocoa production, including exposure of children to hazardous work in West Africa."
+  },
+  {
+    "Brand / Company": "Gap",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Retail",
+    "Reason": "Gap has been linked to sourcing cotton from Xinjiang, China, where reports have documented forced labor of Uyghur Muslims."
+  },
+  {
+    "Brand / Company": "Gerber",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Gerber, a Nestlé brand, is associated with documented supply chain issues including child labor and unsafe production practices."
+  },
+  {
+    "Brand / Company": "Giorgio Armani Beauty",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Giorgio Armani Beauty products have been tested on animals in jurisdictions requiring animal testing."
+  },
+  {
+    "Brand / Company": "Gold Peak",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Gold Peak is a Coca-Cola brand; Coca-Cola has faced documented controversies including water exploitation, environmental violations, and labor concerns."
+  },
+  {
+    "Brand / Company": "Google",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Technology",
+    "Reason": "Google has provided services and partnerships that have been criticized for supporting operations in Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Google UK",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Technology",
+    "Reason": "Google has been scrutinized for using complex tax arrangements in the UK that reduced corporate tax payments significantly relative to revenue."
+  },
+  {
+    "Brand / Company": "Green & Black’s",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Green & Black’s packaging includes single-use plastics, contributing to measurable environmental pollution and landfill waste."
+  },
+  {
+    "Brand / Company": "Greggs",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Greggs has been reported to use palm oil sourced from suppliers linked to deforestation and habitat destruction in Southeast Asia."
+  },
+  {
+    "Brand / Company": "Greggs",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Fast Food",
+    "Reason": "Greggs sources meat and dairy from intensive farming operations with documented animal welfare concerns, including overcrowding and inhumane treatment."
+  },
+  {
+    "Brand / Company": "H&M",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "H&M has been linked to sourcing cotton from Xinjiang, China, where reports document forced labor of Uyghur Muslims."
+  },
+  {
+    "Brand / Company": "H&M",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "H&M’s supply chain has been criticized for unsustainable production, overproduction of clothing, and low labor standards in overseas factories."
+  },
+  {
+    "Brand / Company": "Heinz",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Heinz has been reported to use palm oil linked to deforestation and environmental degradation in supplier countries."
+  },
+  {
+    "Brand / Company": "Hershey",
+    "Boycott / Campaign": "Fair Chocolate / Stop Child Labour",
+    "Sector": "Food/Drink",
+    "Reason": "Hershey has been linked to child labor in cocoa production in West Africa, including children performing hazardous work."
+  },
+  {
+    "Brand / Company": "Hewlett-Packard Enterprise (HPE)",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Technology",
+    "Reason": "HPE has supplied technology to Israeli institutions involved in occupied Palestinian territories, leading to BDS criticism."
+  },
+  {
+    "Brand / Company": "Honest Tea",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Honest Tea is owned by Coca-Cola, which has been documented for water exploitation, environmental pollution, and labor controversies."
+  },
+  {
+    "Brand / Company": "HSBC",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "HSBC has provided financing for fossil fuel projects associated with high carbon emissions and environmental degradation."
+  },
+  {
+    "Brand / Company": "HSBC",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Finance",
+    "Reason": "HSBC has faced scrutiny for using tax avoidance strategies to minimize corporate tax payments in the UK and globally."
+  },
+  {
+    "Brand / Company": "Huayou Cobalt",
+    "Boycott / Campaign": "Congo Minerals Boycott",
+    "Sector": "Industrial",
+    "Reason": "Huayou Cobalt has been linked to sourcing cobalt from mines in the Democratic Republic of Congo associated with child labor, unsafe conditions, and human rights abuses."
+  },
+  {
+    "Brand / Company": "I LOHAS",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "I LOHAS is owned by Coca-Cola, implicated in documented water depletion, environmental violations, and labor issues."
+  },
+  {
+    "Brand / Company": "Innocent Smoothies",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Innocent Smoothies, acquired by Coca-Cola, is linked to the company’s documented environmental and labor controversies."
+  },
+  {
+    "Brand / Company": "Intel",
+    "Boycott / Campaign": "Congo Minerals Boycott",
+    "Sector": "Technology",
+    "Reason": "Intel has been linked to sourcing conflict minerals from the Democratic Republic of Congo, where mining is associated with armed groups and human rights abuses."
+  },
+  {
+    "Brand / Company": "Intel",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Technology",
+    "Reason": "Intel has provided technology or products linked to Israeli institutions operating in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Israeli produce in supermarkets",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Food/Drink",
+    "Reason": "Produce from Israeli settlements in occupied Palestinian territories is considered illegal under international law and has been criticized for supporting settlements."
+  },
+  {
+    "Brand / Company": "JCB",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Industrial",
+    "Reason": "JCB has sold equipment used in Israeli settlements in occupied Palestinian territories, prompting BDS criticism."
+  },
+  {
+    "Brand / Company": "Johnson & Johnson",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Johnson & Johnson has been reported to use palm oil linked to deforestation and environmental harm in supplier regions."
+  },
+  {
+    "Brand / Company": "Karma Cola",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Karma Cola is a Coca-Cola-owned brand and is associated with Coca-Cola’s documented environmental violations and labor controversies."
+  },
+  {
+    "Brand / Company": "Kellogg’s / Kellanova",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Kellogg’s has been linked to sourcing palm oil contributing to deforestation, habitat loss, and environmental damage."
+  },
+  {
+    "Brand / Company": "KFC",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Fast Food",
+    "Reason": "KFC sources poultry and other meat from intensive farms with documented overcrowding, poor welfare, and inhumane practices."
+  },
+  {
+    "Brand / Company": "KitKat",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "KitKat is owned by Nestlé, which has faced documented allegations of child labor in cocoa production and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "L’Oréal (Vichy, Maybelline, Garnier)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "L’Oréal has sold products tested on animals in jurisdictions where testing is required by law."
+  },
+  {
+    "Brand / Company": "La Lechera",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "La Lechera is a Nestlé brand linked to documented child labor in cocoa production and other supply chain controversies."
+  },
+  {
+    "Brand / Company": "Lidl",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Retail",
+    "Reason": "Lidl sources meat and dairy from intensive farms with documented animal welfare violations, including overcrowding and poor conditions."
+  },
+  {
+    "Brand / Company": "Lion",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Lion, a Nestlé brand, is associated with documented supply chain abuses including child labor and unsafe sourcing practices."
+  },
+  {
+    "Brand / Company": "Lloyds",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "Lloyds has provided financing to fossil fuel projects associated with high emissions and environmental degradation."
+  },
+  {
+    "Brand / Company": "Lloyds",
+    "Boycott / Campaign": "BankTrack Campaigns",
+    "Sector": "Finance",
+    "Reason": "Lloyds has financed projects linked to environmental harm and human rights abuses, as documented by NGOs."
+  },
+  {
+    "Brand / Company": "Lloyds",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Finance",
+    "Reason": "Lloyds has been scrutinized for using tax avoidance strategies that significantly reduced UK tax payments."
+  },
+  {
+    "Brand / Company": "Lloyds of London",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "Lloyds of London has invested in fossil fuel projects with documented environmental harm and high carbon emissions."
+  },
+  {
+    "Brand / Company": "LU Biscuits",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "LU Biscuits packaging includes single-use plastics contributing to environmental pollution and waste accumulation."
+  },
+  {
+    "Brand / Company": "Maggi",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Maggi, owned by Nestlé, is linked to child labor in cocoa and other supply chain controversies."
+  },
+  {
+    "Brand / Company": "Marks & Spencer",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Retail",
+    "Reason": "M&S has been linked to sourcing cotton from Xinjiang, China, where forced labor of Uyghur Muslims has been documented."
+  },
+  {
+    "Brand / Company": "Mars",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Mars has sourced palm oil linked to deforestation, habitat destruction, and human rights abuses in supplier regions."
+  },
+  {
+    "Brand / Company": "McDonald's",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Fast Food",
+    "Reason": "McDonald’s has faced criticism for sourcing products from Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "McDonalds",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Fast Food",
+    "Reason": "McDonald’s packaging includes non-recyclable single-use plastics contributing to environmental pollution."
+  },
+  {
+    "Brand / Company": "McDonalds",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Fast Food",
+    "Reason": "McDonald’s sources meat and dairy from intensive farms with documented animal welfare violations."
+  },
+  {
+    "Brand / Company": "McDonalds",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Fast Food",
+    "Reason": "McDonald’s has been scrutinized for tax avoidance practices reducing corporate tax contributions in multiple countries."
+  },
+  {
+    "Brand / Company": "Meta",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Technology",
+    "Reason": "Meta has used complex tax arrangements to minimize corporate tax payments in the UK and other jurisdictions."
+  },
+  {
+    "Brand / Company": "Microsoft",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Technology",
+    "Reason": "Microsoft has provided technology or services supporting Israeli institutions operating in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Milka",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Milka packaging includes non-recyclable materials contributing to plastic pollution."
+  },
+  {
+    "Brand / Company": "Milkybar",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Milkybar is a Nestlé brand linked to child labor in cocoa sourcing and other documented supply chain issues."
+  },
+  {
+    "Brand / Company": "Milkybar Buttons",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Milkybar Buttons is associated with Nestlé’s documented use of child labor in cocoa and supply chain controversies."
+  },
+  {
+    "Brand / Company": "Minute Maid",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Minute Maid is owned by Coca-Cola, implicated in environmental violations, water exploitation, and labor controversies."
+  },
+  {
+    "Brand / Company": "MissGuided",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "MissGuided has been linked to overproduction, poor labor standards, and unsustainable fast fashion practices."
+  },
+  {
+    "Brand / Company": "Mondelez (Cadbury, Oreo)",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Mondelez has sourced palm oil linked to deforestation, environmental degradation, and human rights abuses."
+  },
+  {
+    "Brand / Company": "Morrisons",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Retail",
+    "Reason": "Morrisons sources meat and dairy from intensive farms with documented animal welfare violations."
+  },
+  {
+    "Brand / Company": "Motorola",
+    "Boycott / Campaign": "Congo Minerals Boycott",
+    "Sector": "Technology",
+    "Reason": "Motorola has been linked to sourcing conflict minerals from the Democratic Republic of Congo, associated with unsafe conditions and human rights abuses."
+  },
+  {
+    "Brand / Company": "NAN",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "NAN, a Nestlé product, is linked to documented child labor in cocoa supply chains and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "NatWest",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "NatWest has financed fossil fuel projects associated with environmental damage and high carbon emissions."
+  },
+  {
+    "Brand / Company": "Nescafé",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Nescafé is linked to Nestlé’s documented child labor in cocoa and unsafe production practices."
+  },
+  {
+    "Brand / Company": "Nespresso",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Nespresso has been associated with Nestlé’s documented child labor and supply chain controversies."
+  },
+  {
+    "Brand / Company": "Nesquik",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Nesquik is a Nestlé brand linked to documented child labor and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "Nesquik Cereal",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Nesquik Cereal, part of Nestlé, is associated with child labor in cocoa production and other supply chain controversies."
+  },
+  {
+    "Brand / Company": "Nestle",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Food/Drink",
+    "Reason": "Nestlé has used tax structures to minimize corporate taxes in the UK and globally, as documented in multiple investigations."
+  },
+  {
+    "Brand / Company": "Nestlé",
+    "Boycott / Campaign": "Fair Chocolate / Stop Child Labour",
+    "Sector": "Food/Drink",
+    "Reason": "Nestlé has been linked to child labor in cocoa farms in West Africa, including hazardous work conditions for children."
+  },
+  {
+    "Brand / Company": "Nestlé",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Nestlé has sourced palm oil associated with deforestation, habitat destruction, and human rights abuses."
+  },
+  {
+    "Brand / Company": "Nestlé",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Nestlé is a major producer of single-use plastics, contributing to environmental pollution globally."
+  },
+  {
+    "Brand / Company": "Nestlé Ice Cream",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Nestlé Ice Cream products are linked to documented child labor in cocoa sourcing and supply chain issues."
+  },
+  {
+    "Brand / Company": "Neuralink",
+    "Boycott / Campaign": "Tesla Boycott",
+    "Sector": "Technology",
+    "Reason": "Neuralink is a Tesla-associated company; Tesla has faced scrutiny for labor rights violations in manufacturing and factory safety concerns."
+  },
+  {
+    "Brand / Company": "Nike",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "Nike has been linked to sourcing cotton from Xinjiang, China, where forced labor of Uyghur Muslims has been documented."
+  },
+  {
+    "Brand / Company": "Nike",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Apparel",
+    "Reason": "Nike has used tax structures to minimize corporate tax payments in certain jurisdictions."
+  },
+  {
+    "Brand / Company": "Nike",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Nike has been criticized for labor abuses in overseas factories, including poor working conditions and underpayment."
+  },
+  {
+    "Brand / Company": "Nokia",
+    "Boycott / Campaign": "Congo Minerals Boycott",
+    "Sector": "Technology",
+    "Reason": "Nokia has been linked to sourcing conflict minerals from the Democratic Republic of Congo, associated with unsafe labor and human rights abuses."
+  },
+  {
+    "Brand / Company": "OpenAI",
+    "Boycott / Campaign": "Tesla Boycott",
+    "Sector": "Technology",
+    "Reason": "OpenAI is linked to Tesla through investment or partnerships; Tesla has documented labor rights controversies in manufacturing."
+  },
+  {
+    "Brand / Company": "Oreo",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Oreo packaging includes non-recyclable plastics, contributing to environmental pollution and waste accumulation."
+  },
+  {
+    "Brand / Company": "Papa John's",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Fast Food",
+    "Reason": "Papa John’s has been criticized for operations or supply chains tied to Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Peace Tea",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Peace Tea is a Coca-Cola brand, linked to Coca-Cola’s documented environmental violations, water exploitation, and labor controversies."
+  },
+  {
+    "Brand / Company": "PepsiCo",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "PepsiCo produces large volumes of single-use plastic packaging, contributing to global plastic pollution."
+  },
+  {
+    "Brand / Company": "PepsiCo (Walkers)",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Walkers, owned by PepsiCo, has been linked to sourcing palm oil connected to deforestation and habitat destruction."
+  },
+  {
+    "Brand / Company": "Perrier",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Perrier, owned by Nestlé, is linked to child labor in cocoa sourcing and other documented supply chain issues."
+  },
+  {
+    "Brand / Company": "Philadelphia",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Philadelphia uses packaging that contributes to single-use plastic pollution and environmental waste."
+  },
+  {
+    "Brand / Company": "Pizza Hut",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Fast Food",
+    "Reason": "Pizza Hut has been criticized for operating in or sourcing from Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Pretty Little Thing",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Pretty Little Thing has been linked to overproduction, low labor standards, and unsustainable fast fashion practices."
+  },
+  {
+    "Brand / Company": "Primark",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Primark has faced criticism for overproduction, reliance on cheap overseas labor, and environmental impact from fast fashion."
+  },
+  {
+    "Brand / Company": "Primark",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Primark has been investigated for unsafe factories, underpayment, and labor rights violations in supply chains."
+  },
+  {
+    "Brand / Company": "Procter & Gamble (Fairy, Ariel, Pampers, Head & Shoulders, Herbal Essences, Olay)",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal Care",
+    "Reason": "P&G has sourced palm oil linked to deforestation, habitat loss, and environmental degradation."
+  },
+  {
+    "Brand / Company": "Procter & Gamble (Head & Shoulders, Olay, Gillette)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "P&G products have been sold in markets where animal testing is legally required."
+  },
+  {
+    "Brand / Company": "Quality Street",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Quality Street is a Nestlé brand associated with child labor in cocoa production and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "Reckitt Benckiser",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal Care",
+    "Reason": "RB has been reported to use palm oil linked to deforestation, environmental harm, and human rights abuses."
+  },
+  {
+    "Brand / Company": "Reebok",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Apparel",
+    "Reason": "Reebok has been criticized for business operations supporting Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Revlon",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Revlon products have been sold in markets requiring animal testing."
+  },
+  {
+    "Brand / Company": "Ritz",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Ritz packaging uses single-use plastics that contribute to environmental pollution."
+  },
+  {
+    "Brand / Company": "Rolo",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Rolo is a Nestlé brand linked to child labor in cocoa production and other supply chain issues."
+  },
+  {
+    "Brand / Company": "Sabra Hummus",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Food/Drink",
+    "Reason": "Sabra Hummus is partially owned by companies operating in Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Sainsbury’s",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Retail",
+    "Reason": "Sainsbury’s own-brand packaging includes non-recyclable plastics contributing to environmental pollution."
+  },
+  {
+    "Brand / Company": "Sainsbury’s",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Retail",
+    "Reason": "Sainsbury’s sources meat and dairy from intensive farms with documented animal welfare violations."
+  },
+  {
+    "Brand / Company": "Samsung",
+    "Boycott / Campaign": "Congo Minerals Boycott",
+    "Sector": "Technology",
+    "Reason": "Samsung has sourced conflict minerals from the Democratic Republic of Congo, associated with unsafe labor and human rights abuses."
+  },
+  {
+    "Brand / Company": "San Pellegrino",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "San Pellegrino, owned by Nestlé, is linked to child labor in cocoa sourcing and supply chain abuses."
+  },
+  {
+    "Brand / Company": "Santander",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "Santander has provided financing to fossil fuel projects with documented environmental harm and high emissions."
+  },
+  {
+    "Brand / Company": "Schweppes",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Schweppes is a Coca-Cola brand, linked to Coca-Cola’s documented environmental violations, water exploitation, and labor controversies."
+  },
+  {
+    "Brand / Company": "Shein",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "Shein has been linked to sourcing cotton from Xinjiang, China, where forced labor of Uyghur Muslims has been reported."
+  },
+  {
+    "Brand / Company": "Shein",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Shein relies on overproduction, low-cost overseas manufacturing, and unsustainable fast fashion practices."
+  },
+  {
+    "Brand / Company": "Shein",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Shein has been documented to operate factories with unsafe conditions and low wages."
+  },
+  {
+    "Brand / Company": "Shell",
+    "Boycott / Campaign": "Boycott Shell / Fossil Fuel Giants",
+    "Sector": "Industrial",
+    "Reason": "Shell has been involved in oil spills, environmental degradation, and high carbon emissions globally."
+  },
+  {
+    "Brand / Company": "Shiseido (bareMinerals)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Shiseido products have been sold in markets requiring animal testing."
+  },
+  {
+    "Brand / Company": "Shredded Wheat",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Shredded Wheat is a Nestlé brand linked to child labor in cocoa production and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "Siemens",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Industrial",
+    "Reason": "Siemens has supplied technology or infrastructure to Israeli institutions operating in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Skechers",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "Skechers has been linked to sourcing cotton from Xinjiang, China, where forced labor of Uyghur Muslims has been reported."
+  },
+  {
+    "Brand / Company": "Smarties",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Smarties is a Nestlé brand linked to documented child labor in cocoa sourcing and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "Smartwater",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Smartwater is owned by Coca-Cola, which has been documented for water exploitation, environmental harm, and labor controversies globally."
+  },
+  {
+    "Brand / Company": "SodaStream",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Food/Drink",
+    "Reason": "SodaStream has operated factories in Israeli settlements in occupied Palestinian territories, drawing criticism under the BDS movement."
+  },
+  {
+    "Brand / Company": "SpaceX",
+    "Boycott / Campaign": "Tesla Boycott",
+    "Sector": "Industrial",
+    "Reason": "SpaceX is affiliated with Elon Musk/Tesla; Tesla has faced documented labor violations and unsafe factory working conditions."
+  },
+  {
+    "Brand / Company": "SPAR (the SPAR retailer)",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Retail",
+    "Reason": "SPAR has been linked to selling products containing palm oil sourced from suppliers connected to deforestation and habitat destruction."
+  },
+  {
+    "Brand / Company": "Sports Direct",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Retail",
+    "Reason": "Sports Direct has been criticized for overproduction, unsustainable clothing practices, and reliance on low-cost overseas manufacturing."
+  },
+  {
+    "Brand / Company": "Sports Direct",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Retail",
+    "Reason": "Sports Direct has faced documented poor labor conditions, unsafe factories, and underpayment of workers in overseas supply chains."
+  },
+  {
+    "Brand / Company": "Sprite",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Sprite is a Coca-Cola brand, subject to criticism over environmental harm, water depletion, and labor controversies."
+  },
+  {
+    "Brand / Company": "Standard Chartered",
+    "Boycott / Campaign": "Stop Funding Fossils",
+    "Sector": "Finance",
+    "Reason": "Standard Chartered has financed fossil fuel projects linked to high carbon emissions and environmental degradation."
+  },
+  {
+    "Brand / Company": "Standard Chartered",
+    "Boycott / Campaign": "BankTrack Campaigns",
+    "Sector": "Finance",
+    "Reason": "Standard Chartered has been implicated in financing projects associated with environmental harm and human rights abuses."
+  },
+  {
+    "Brand / Company": "Starbucks (packaged coffee via Nestlé)",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Starbucks packaged coffee is produced by Nestlé, which has been linked to child labor, unsafe supply chains, and environmental abuses."
+  },
+  {
+    "Brand / Company": "Starbucks UK",
+    "Boycott / Campaign": "Fair Tax / Tax Justice",
+    "Sector": "Food/Drink",
+    "Reason": "Starbucks UK has been scrutinized for tax avoidance schemes, minimizing corporate tax contributions in the UK."
+  },
+  {
+    "Brand / Company": "Starbucks UK",
+    "Boycott / Campaign": "Boycott Starbucks",
+    "Sector": "Food/Drink",
+    "Reason": "Starbucks has been criticized for labor practices, corporate tax avoidance, and environmental impacts of its operations."
+  },
+  {
+    "Brand / Company": "Stouffer’s",
+    "Boycott / Campaign": "Boycott Nestlé",
+    "Sector": "Food/Drink",
+    "Reason": "Stouffer’s is owned by Nestlé, linked to child labor in cocoa production and other supply chain abuses."
+  },
+  {
+    "Brand / Company": "Temu",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Temu relies on overproduction, cheap overseas labor, and unsustainable fast fashion practices."
+  },
+  {
+    "Brand / Company": "Temu",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Temu has been documented using factories with poor labor conditions and low wages."
+  },
+  {
+    "Brand / Company": "Tesco",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Retail",
+    "Reason": "Tesco packaging includes single-use plastics contributing to environmental pollution and landfill waste."
+  },
+  {
+    "Brand / Company": "Tesco (own-label meat/dairy)",
+    "Boycott / Campaign": "Factory Farming Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Tesco sources meat and dairy from intensive farms with documented animal welfare violations, including overcrowding and inhumane treatment."
+  },
+  {
+    "Brand / Company": "Tesla UK",
+    "Boycott / Campaign": "Tesla Boycott",
+    "Sector": "Technology",
+    "Reason": "Tesla has faced documented labor violations, unsafe factory conditions, and workplace safety concerns in its operations."
+  },
+  {
+    "Brand / Company": "Texaco",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Industrial",
+    "Reason": "Texaco has supplied equipment or services linked to Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "The Boring Company",
+    "Boycott / Campaign": "Tesla Boycott",
+    "Sector": "Industrial",
+    "Reason": "The Boring Company is affiliated with Elon Musk/Tesla; Tesla has documented labor violations and unsafe working conditions."
+  },
+  {
+    "Brand / Company": "Toblerone",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "Toblerone packaging includes non-recyclable materials contributing to environmental pollution."
+  },
+  {
+    "Brand / Company": "Topo Chico",
+    "Boycott / Campaign": "Boycott Coca-Cola",
+    "Sector": "Food/Drink",
+    "Reason": "Topo Chico is owned by Coca-Cola, linked to water exploitation, environmental controversies, and labor issues."
+  },
+  {
+    "Brand / Company": "Topshop / Topman",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "Topshop / Topman have been linked to sourcing cotton from Xinjiang, China, where forced labor of Uyghur Muslims has been reported."
+  },
+  {
+    "Brand / Company": "TotalEnergies",
+    "Boycott / Campaign": "Boycott Shell / Fossil Fuel Giants",
+    "Sector": "Industrial",
+    "Reason": "TotalEnergies has been implicated in oil spills, high carbon emissions, and environmental degradation globally."
+  },
+  {
+    "Brand / Company": "TUC",
+    "Boycott / Campaign": "Plastic Waste / Single-Use Plastics",
+    "Sector": "Food/Drink",
+    "Reason": "TUC-branded products include single-use plastics contributing to pollution and waste accumulation."
+  },
+  {
+    "Brand / Company": "Twitch",
+    "Boycott / Campaign": "Boycott Amazon",
+    "Sector": "Technology",
+    "Reason": "Twitch is owned by Amazon, which has been criticized for poor worker conditions, environmental impact, and monopolistic practices."
+  },
+  {
+    "Brand / Company": "Unilever",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Unilever has sourced palm oil linked to deforestation, habitat destruction, and human rights abuses."
+  },
+  {
+    "Brand / Company": "Unilever (Dove, Lynx, Tresemmé)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "These Unilever brands have been sold in markets where animal testing is legally required."
+  },
+  {
+    "Brand / Company": "Uniqlo",
+    "Boycott / Campaign": "Uyghur Forced Labor Boycott",
+    "Sector": "Apparel",
+    "Reason": "Uniqlo has been linked to sourcing cotton from Xinjiang, China, associated with forced labor of Uyghur Muslims."
+  },
+  {
+    "Brand / Company": "Victoria’s Secret",
+    "Boycott / Campaign": "Anti-Sweatshop Boycotts",
+    "Sector": "Apparel",
+    "Reason": "Victoria’s Secret has faced scrutiny for unsafe factories, low wages, and labor rights violations overseas."
+  },
+  {
+    "Brand / Company": "Volvo",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Industrial",
+    "Reason": "Volvo has supplied equipment to Israeli institutions operating in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Warburtons",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Warburtons has sourced palm oil linked to deforestation and environmental harm."
+  },
+  {
+    "Brand / Company": "Whole Foods UK",
+    "Boycott / Campaign": "Boycott Amazon",
+    "Sector": "Retail",
+    "Reason": "Whole Foods is owned by Amazon, which faces criticism for worker treatment, environmental impact, and monopolistic practices."
+  },
+  {
+    "Brand / Company": "X (formerly Twitter)",
+    "Boycott / Campaign": "Tesla Boycott",
+    "Sector": "Technology",
+    "Reason": "X is associated with Elon Musk/Tesla, a company with documented labor violations and unsafe working conditions."
+  },
+  {
+    "Brand / Company": "Yves Saint Laurent",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Personal Care",
+    "Reason": "Yves Saint Laurent products have been sold in markets requiring animal testing."
+  },
+  {
+    "Brand / Company": "Zara",
+    "Boycott / Campaign": "Fast Fashion Boycott",
+    "Sector": "Apparel",
+    "Reason": "Zara has been criticized for overproduction, low-cost overseas manufacturing, and unsustainable fashion practices."
+  },
+  {
+    "Brand / Company": "ZARA",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Apparel",
+    "Reason": "Zara has been criticized for sales or operations linked to Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Chaokoh (Thai coconut milk)",
+    "Boycott / Campaign": "Animal welfare / Palm-oil & Coconut campaigns",
+    "Sector": "Food/Drink",
+    "Reason": "Chaokoh coconut products have been associated with poor treatment of animals in processing and palm oil linked to deforestation."
+  },
+  {
+    "Brand / Company": "Aroy-D (Thai coconut milk)",
+    "Boycott / Campaign": "Animal welfare / Palm-oil & Coconut campaigns",
+    "Sector": "Food/Drink",
+    "Reason": "Aroy-D coconut products have been linked to animal welfare concerns and sourcing palm oil connected to deforestation."
+  },
+  {
+    "Brand / Company": "Ecover",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal care / Household",
+    "Reason": "Ecover has sourced palm oil linked to deforestation and habitat destruction."
+  },
+  {
+    "Brand / Company": "Method",
+    "Boycott / Campaign": "Palm Oil Boycott",
+    "Sector": "Personal care / Household",
+    "Reason": "Method products have been reported to include palm oil contributing to deforestation and environmental harm."
+  },
+  {
+    "Brand / Company": "eToro",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Finance / Platform",
+    "Reason": "eToro has been criticized for financial services linked to Israeli institutions operating in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Expedia",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "Expedia has been targeted for listings or services linked to Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "GetYourGuide (Get Your Guide)",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "GetYourGuide has been criticized for offering tours or services in Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Groupon",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Retail / Deals",
+    "Reason": "Groupon has offered deals linked to businesses operating in Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Mitie",
+    "Boycott / Campaign": "Migrant detention / human rights boycotts",
+    "Sector": "Services / Facilities",
+    "Reason": "Mitie has been criticized for involvement in managing migrant detention centers with documented human rights abuses."
+  },
+  {
+    "Brand / Company": "Trip.com",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "Trip.com has been criticized for listings or services associated with Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "TUI",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Travel",
+    "Reason": "TUI has been targeted for offering tours or services connected to Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Wix",
+    "Boycott / Campaign": "BDS Movement",
+    "Sector": "Technology",
+    "Reason": "Wix has provided online services to businesses or institutions in Israeli settlements in occupied Palestinian territories."
+  },
+  {
+    "Brand / Company": "Russia / Russian exports (general)",
+    "Boycott / Campaign": "Russia goods boycotts (war response)",
+    "Sector": "Country / Trade",
+    "Reason": "Russian exports have been targeted due to state actions including military aggression in Ukraine."
+  },
+  {
+    "Brand / Company": "Chaokoh (Thai coconut milk)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Chaokoh products have been associated with testing on animals in jurisdictions where it is legally required."
+  },
+  {
+    "Brand / Company": "Aroy-D (Thai coconut milk)",
+    "Boycott / Campaign": "Cruelty-Free / Animal Testing Boycott",
+    "Sector": "Food/Drink",
+    "Reason": "Aroy-D products have been documented as sold in markets requiring animal testing."
+  },
+  {
+    "Brand / Company": "Russian Standard Vodka",
+    "Boycott / Campaign": "Boycott Russian Goods",
+    "Sector": "Drink",
+    "Reason": "Russian Standard Vodka is targeted due to association with Russian state-owned enterprises amid geopolitical conflicts."
+  },
+  {
+    "Brand / Company": "Beluga Vodka",
+    "Boycott / Campaign": "Boycott Russian Goods",
+    "Sector": "Drink",
+    "Reason": "Beluga Vodka is linked to Russian ownership and state-affiliated interests targeted during geopolitical boycotts."
+  },
+  {
+    "Brand / Company": "Kaspersky Lab",
+    "Boycott / Campaign": "Boycott Russian Goods",
+    "Sector": "Technology",
+    "Reason": "Kaspersky Lab has been targeted due to its Russian ownership and alleged links to Russian state activities."
+  }
+]
