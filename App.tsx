@@ -65,7 +65,11 @@ function HomeStack() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
-      <Stack.Screen name="MerchantDetails" component={MerchantDetailsScreen} />
+      <Stack.Screen
+        name="MerchantDetails"
+        // wrap component to satisfy typing differences between stacks
+        component={(props: any) => <MerchantDetailsScreen {...props} />}
+      />
       <Stack.Screen name="BrandDetails" component={BrandDetailsScreen} />
       <Stack.Screen name="MovementDetails" component={MovementDetailsScreen} />
       <Stack.Screen name="EthicalPurchaseResults" component={EthicalPurchaseResultsScreen} />
@@ -79,7 +83,10 @@ function CategoryStack() {
       <Stack.Screen name="CategoriesList" component={CategoriesScreen} />
       <Stack.Screen name="Subcategories" component={SubcategoriesScreen} />
       <Stack.Screen name="CategoryDetails" component={CategoryDetailsScreen} />
-      <Stack.Screen name="MerchantDetails" component={MerchantDetailsScreen} />
+      <Stack.Screen
+        name="MerchantDetails"
+        component={(props: any) => <MerchantDetailsScreen {...props} />}
+      />
       <Stack.Screen name="MovementDetails" component={MovementDetailsScreen} />
     </Stack.Navigator>
   );
@@ -99,6 +106,10 @@ function BrandsStack() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Brands" component={BrandsScreen} />
       <Stack.Screen name="BrandDetails" component={BrandDetailsScreen} />
+      <Stack.Screen
+        name="MerchantDetails"
+        component={(props: any) => <MerchantDetailsScreen {...props} />}
+      />
     </Stack.Navigator>
   );
 }

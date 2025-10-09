@@ -3,7 +3,7 @@ import { ethicalScoreSystemPrompt } from './ethicalScoreSystemPrompt';
 import { homeScreenSystemPrompt } from './homeScreenSystemPrompt';
 import { boycottSystemPrompt } from './boycottSystemPrompt';
 
-const apiKey = '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';
+const apiKey = 'REMOVE_FOR_SECURITY_REASONS';
 const groqApiUrl = 'https://api.groq.com/openai/v1/chat/completions';
 
 export async function getEthicalScore(prompt: string) {

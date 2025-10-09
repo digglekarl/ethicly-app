@@ -1,9 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, TextInput, ActivityIndicator, Alert } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { COLORS } from '../styles/colors';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { EthicalScoreResponse } from '../store/searchStore';
+import useSearchStore, { EthicalScoreResponse } from '../store/searchStore';
+import { ethicalScoreUserPrompt } from '../api/ethicalScoreUserPrompt';
+import { ethicalScoreSystemPrompt } from '../api/ethicalScoreSystemPrompt';
+import { getEthicalScore } from '../api/groqSystemPrompt';
 
 import boycottedBrandsData from '../data/02_Boycotted_brands.json';
 
@@ -30,6 +33,7 @@ type BrandsScreenNavigationProp = NativeStackNavigationProp<
 export default function BrandsScreen({ navigation }: { navigation: BrandsScreenNavigationProp }) {
     const [selectedCategory, setSelectedCategory] = useState<string>('All');
     const [searchQuery, setSearchQuery] = useState<string>('');
+  const [loadingBrand, setLoadingBrand] = useState<string | null>(null);
     
     // Get unique sectors from the boycotted brands data
     const categories = useMemo(() => {
@@ -37,11 +41,48 @@ export default function BrandsScreen({ navigation }: { navigation: BrandsScreenN
         return ['All', ...sectors.sort()];
     }, []);
 
-    const handleBrandPress = (brand: BoycottedBrand) => {
-        navigation.navigate('BrandDetails', { 
-            brandName: brand['Brand / Company']
-        });
-    };
+  const handleBrandPress = async (brand: BoycottedBrand) => {
+    const brandName = brand['Brand / Company'];
+    try {
+      setLoadingBrand(brandName);
+
+      // Check cache first
+      const cached = useSearchStore.getState().searchCache[brandName];
+      let scoreResponse: EthicalScoreResponse | null = null;
+
+      if (cached) {
+        scoreResponse = cached;
+      } else {
+        // Build prompt and fetch from Groq
+        const userPrompt = ethicalScoreUserPrompt.replace('{searchTerm}', brandName);
+        const prompt = `${ethicalScoreSystemPrompt}\n${userPrompt}`;
+        const rawResponse = await getEthicalScore(prompt);
+
+        // try to extract json block if present
+        const jsonMatch = rawResponse && rawResponse.match ? rawResponse.match(/```json\s*([\s\S]*?)\s*```/) : null;
+        const jsonString = jsonMatch ? jsonMatch[1] : (rawResponse && typeof rawResponse === 'string' ? rawResponse.substring(rawResponse.indexOf('{'), rawResponse.lastIndexOf('}') + 1) : null);
+                if (!jsonString) throw new Error('Unable to parse ethical score response');
+                const parsed = JSON.parse(jsonString) as EthicalScoreResponse;
+                if (!parsed) throw new Error('Parsed ethical score is empty');
+                scoreResponse = parsed;
+                useSearchStore.getState().addSearch(brandName, parsed);
+      }
+
+      // Navigate to MerchantDetails with the fetched score
+      navigation.navigate('MerchantDetails', {
+        merchant: {
+          name: brandName,
+          ethicalScore: scoreResponse as EthicalScoreResponse,
+          logo: '',
+        }
+      });
+    } catch (e) {
+      console.warn('Error fetching ethical score for', brand['Brand / Company'], e);
+      Alert.alert('Error', `Failed to fetch ethical score for ${brand['Brand / Company']}.`);
+    } finally {
+      setLoadingBrand(null);
+    }
+  };
 
     const getFilteredBrands = useMemo(() => {
         let filtered = boycottedBrandsData;
@@ -140,7 +181,11 @@ export default function BrandsScreen({ navigation }: { navigation: BrandsScreenN
                                     <Text style={styles.brandName}>{item['Brand / Company']}</Text>
                                     <Text style={styles.brandSector}>{item.Sector}</Text>
                                 </View>
-                                <Ionicons name="chevron-forward" size={20} color={COLORS.sage} />
+                {loadingBrand === item['Brand / Company'] ? (
+                  <ActivityIndicator size="small" color={COLORS.sage} />
+                ) : (
+                  <Ionicons name="chevron-forward" size={20} color={COLORS.sage} />
+                )}
                             </View>
                             <View style={styles.brandDetails}>
                                 <Text style={styles.campaignText}>{item['Boycott / Campaign']}</Text>

@@ -1,9 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, ScrollView, Image, ActivityIndicator } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { COLORS } from '../styles/colors';
+import useSearchStore, { EthicalScoreResponse } from '../store/searchStore';
+import { getEthicalScore } from '../api/groqSystemPrompt';
+import { ethicalScoreUserPrompt } from '../api/ethicalScoreUserPrompt';
 
 // Function to get brand logo URL (same as in SubcategoriesScreen)
 const getBrandLogo = (brandName: string): string => {
@@ -177,7 +180,7 @@ type CategoryStackParamList = {
     CategoriesList: undefined;
     Subcategories: { categoryName: string };
     CategoryDetails: { categoryName: string; subcategoryName: string };
-    MerchantDetails: { merchant: { name: string; ethicalScore: string } };
+    MerchantDetails: { merchant: { name: string; ethicalScore: EthicalScoreResponse; logo?: string } };
 };
 
 type Props = NativeStackScreenProps<CategoryStackParamList, 'CategoryDetails'>;
@@ -192,54 +195,290 @@ export default function CategoryDetailsScreen({ route, navigation }: Props) {
     const { categoryName, subcategoryName } = route.params;
     const [subcategoryData, setSubcategoryData] = useState<{brandsToAvoid: string[]; ethicalAlternatives: string[]} | null>(null);
 
+    // Score/cache state (mirrors SubcategoriesScreen behavior)
+    const [brandScores, setBrandScores] = useState<Record<string, EthicalScoreResponse | null>>({});
+    const [loadingScores, setLoadingScores] = useState<Record<string, boolean>>({});
+    const [retryCount, setRetryCount] = useState<Record<string, number>>({});
+    const { searchCache, addSearch } = useSearchStore();
+
+    useEffect(() => {
+        // Initialize brand scores from cache when subcategory data loads
+        if (subcategoryData?.brandsToAvoid) {
+            const scores: Record<string, EthicalScoreResponse | null> = {};
+            subcategoryData.brandsToAvoid.forEach(brand => {
+                if (searchCache[brand]) scores[brand] = searchCache[brand];
+                else scores[brand] = null;
+            });
+            setBrandScores(scores);
+        }
+
+        if (subcategoryData?.ethicalAlternatives) {
+            const scores2: Record<string, EthicalScoreResponse | null> = {};
+            subcategoryData.ethicalAlternatives.forEach(brand => {
+                if (searchCache[brand]) scores2[brand] = searchCache[brand];
+                else scores2[brand] = null;
+            });
+            setBrandScores(prev => ({ ...prev, ...scores2 }));
+        }
+    }, [subcategoryData]);
+
+    // Update local state when global cache changes
+    useEffect(() => {
+        if (!subcategoryData) return;
+        const updated: Record<string, EthicalScoreResponse | null> = { ...brandScores };
+        let hasUpdates = false;
+
+        [...(subcategoryData.brandsToAvoid || []), ...(subcategoryData.ethicalAlternatives || [])].forEach(brand => {
+            const cached = searchCache[brand];
+            const current = brandScores[brand];
+            if (cached && (!current || current.overall_score === -1)) {
+                updated[brand] = cached;
+                hasUpdates = true;
+            }
+        });
+
+        if (hasUpdates) setBrandScores(updated);
+    }, [searchCache, subcategoryData]);
+
     useEffect(() => {
         const data = subcategoryBrandsData[subcategoryName];
         setSubcategoryData(data || null);
     }, [subcategoryName]);
 
+    // On mount / when subcategoryData becomes available, prefetch missing scores
+    useEffect(() => {
+        if (!subcategoryData) return;
+
+        const allBrands = [ ...(subcategoryData.brandsToAvoid || []), ...(subcategoryData.ethicalAlternatives || []) ];
+        // Stagger requests to avoid hitting the API all at once
+        allBrands.forEach((brand, idx) => {
+            const cached = searchCache[brand];
+            const local = brandScores[brand];
+
+            // If already cached globally or we have a valid local score, skip
+            if (cached || (local && local.overall_score >= 0)) return;
+
+            // Schedule fetch with a small stagger (300ms increments)
+            const delay = Math.min(300 * idx, 3000);
+            setTimeout(() => {
+                // Double-check before fetching
+                if (!useSearchStore.getState().searchCache[brand] && !(brandScores[brand] && brandScores[brand]!.overall_score >= 0)) {
+                    fetchEthicalScore(brand);
+                }
+            }, delay);
+        });
+    }, [subcategoryData]);
+
     const renderBrandToAvoidItem = ({ item }: { item: string }) => (
-        <View style={styles.brandCard}>
-            <View style={styles.logoContainer}>
-                <Image
-                    source={{
-                        uri: getBrandLogo(item),
-                    }}
-                    style={styles.brandLogo}
-                    onError={() => {}}
-                />
-                <View style={styles.logoFallback}>
-                    <Text style={styles.logoFallbackText}>{item.charAt(0).toUpperCase()}</Text>
+        <TouchableOpacity
+            style={styles.brandToAvoidCard}
+            activeOpacity={0.8}
+            onPress={() => {
+                const score = brandScores[item];
+                const isLoading = loadingScores[item];
+                if (score && score.overall_score >= 0) {
+                    navigation.navigate('MerchantDetails', { merchant: { name: item, ethicalScore: score } });
+                } else if (!isLoading) {
+                    const currentRetries = retryCount[item] || 0;
+                    if (currentRetries < 3) fetchEthicalScore(item);
+                }
+            }}
+            onLongPress={() => clearBrandCache(item)}
+        >
+            <Text style={styles.brandText} numberOfLines={2}>{item}</Text>
+
+            <View style={styles.centerStack}>
+                <View style={styles.bigCircleWrap}>
+                    {loadingScores[item] ? (
+                        <View style={styles.bigScoreLoading}>
+                            <ActivityIndicator size="large" color={COLORS.white} />
+                        </View>
+                    ) : brandScores[item] ? (
+                        brandScores[item]!.overall_score >= 0 ? (
+                            <View style={[styles.bigScoreCircle, { backgroundColor: getScoreBackgroundColor(brandScores[item]!.overall_score) }]}>
+                                <Text style={styles.bigScoreValue}>{brandScores[item]!.overall_score}</Text>
+                                <Text style={styles.bigScoreOutOf}>/ 100</Text>
+                            </View>
+                        ) : (
+                            <TouchableOpacity style={[styles.bigScoreCircle, styles.bigScoreError]} onPress={() => {
+                                const currentRetries = retryCount[item] || 0;
+                                if (currentRetries < 3) fetchEthicalScore(item);
+                            }}>
+                                <Ionicons name="refresh" size={18} color={COLORS.white} />
+                            </TouchableOpacity>
+                        )
+                    ) : (
+                        <TouchableOpacity style={[styles.bigScoreCircle, styles.bigScoreEmpty]} onPress={() => fetchEthicalScore(item)}>
+                            <Text style={styles.bigQuestion}>?</Text>
+                        </TouchableOpacity>
+                    )}
+
+                    <View style={styles.brandLogoOverlay}>
+                        <Image source={{ uri: getBrandLogo(item) }} style={styles.brandLogoOverlayImage} />
+                    </View>
                 </View>
             </View>
-            <Text style={styles.brandName} numberOfLines={2}>{item}</Text>
-        </View>
+        </TouchableOpacity>
     );
 
     const renderEthicalAlternativeItem = ({ item }: { item: string }) => (
-        <View style={[styles.brandCard, styles.alternativeCard]}>
-            <View style={styles.logoContainer}>
-                <Image
-                    source={{
-                        uri: getBrandLogo(item),
-                    }}
-                    style={styles.brandLogo}
-                    onError={() => {}}
-                />
-                <View style={styles.logoFallback}>
-                    <Text style={styles.logoFallbackText}>{item.charAt(0).toUpperCase()}</Text>
+        <TouchableOpacity
+            style={styles.ethicalAlternativeCard}
+            activeOpacity={0.8}
+            onPress={() => {
+                const score = brandScores[item];
+                const isLoading = loadingScores[item];
+                if (score && score.overall_score >= 0) {
+                    navigation.navigate('MerchantDetails', { merchant: { name: item, ethicalScore: score } });
+                } else if (!isLoading) {
+                    const currentRetries = retryCount[item] || 0;
+                    if (currentRetries < 3) fetchEthicalScore(item);
+                }
+            }}
+        >
+            <Text style={styles.brandText} numberOfLines={2}>{item}</Text>
+
+            <View style={styles.centerStack}>
+                <View style={styles.bigCircleWrap}>
+                    {loadingScores[item] ? (
+                        <View style={styles.bigScoreLoading}>
+                            <ActivityIndicator size="large" color={COLORS.white} />
+                        </View>
+                    ) : brandScores[item] ? (
+                        brandScores[item]!.overall_score >= 0 ? (
+                            <View style={[styles.bigScoreCircle, { backgroundColor: getScoreBackgroundColor(brandScores[item]!.overall_score) }]}>
+                                <Text style={styles.bigScoreValue}>{brandScores[item]!.overall_score}</Text>
+                                <Text style={styles.bigScoreOutOf}>/ 100</Text>
+                            </View>
+                        ) : (
+                            <TouchableOpacity style={[styles.bigScoreCircle, styles.bigScoreError]} onPress={() => {
+                                const currentRetries = retryCount[item] || 0;
+                                if (currentRetries < 3) fetchEthicalScore(item);
+                            }}>
+                                <Ionicons name="refresh" size={18} color={COLORS.white} />
+                            </TouchableOpacity>
+                        )
+                    ) : (
+                        <TouchableOpacity style={[styles.bigScoreCircle, styles.bigScoreEmpty]} onPress={() => fetchEthicalScore(item)}>
+                            <Text style={styles.bigQuestion}>?</Text>
+                        </TouchableOpacity>
+                    )}
+
+                    <View style={styles.brandLogoOverlay}>
+                        <Image source={{ uri: getBrandLogo(item) }} style={styles.brandLogoOverlayImage} />
+                    </View>
                 </View>
             </View>
-            <Text style={styles.brandName} numberOfLines={2}>{item}</Text>
-        </View>
+        </TouchableOpacity>
     );
 
+    const clearBrandCache = (brandName: string) => {
+        const currentCache = useSearchStore.getState().searchCache;
+        const { [brandName]: removed, ...remaining } = currentCache;
+        useSearchStore.setState({ searchCache: remaining });
+        setBrandScores(prev => ({ ...prev, [brandName]: null }));
+        setRetryCount(prev => ({ ...prev, [brandName]: 0 }));
+    };
+
+    const fetchEthicalScore = async (brandName: string) => {
+        if (loadingScores[brandName]) return;
+        if (brandScores[brandName] && brandScores[brandName]!.overall_score >= 0) return;
+        if (searchCache[brandName]) {
+            setBrandScores(prev => ({ ...prev, [brandName]: searchCache[brandName] }));
+            return;
+        }
+        const currentRetries = retryCount[brandName] || 0;
+        if (currentRetries >= 2) return;
+
+        setLoadingScores(prev => ({ ...prev, [brandName]: true }));
+        try {
+            const userPrompt = ethicalScoreUserPrompt.replace('{searchTerm}', brandName);
+            const raw = await getEthicalScore(userPrompt);
+            if (!raw || raw.includes('Error:') || raw.includes('Network Error') || raw.trim() === '') {
+                throw new Error(`Invalid API response for ${brandName}`);
+            }
+
+            let scoreResponse: EthicalScoreResponse;
+            try {
+                scoreResponse = JSON.parse(raw as unknown as string);
+            } catch (e) {
+                const jsonMatch = (raw as string).match(/```json\s*([\s\S]*?)\s*```/);
+                if (jsonMatch && jsonMatch[1]) scoreResponse = JSON.parse(jsonMatch[1]);
+                else {
+                    const start = (raw as string).indexOf('{');
+                    const end = (raw as string).lastIndexOf('}');
+                    if (start !== -1 && end !== -1 && end > start) {
+                        const jsonString = (raw as string).substring(start, end + 1);
+                        scoreResponse = JSON.parse(jsonString);
+                    } else {
+                        const scoreMatch = (raw as string).match(/([0-9]{1,3})\s*\/\s*100/);
+                        const scoreMatch2 = (raw as string).match(/overall\s*score[:\s]*([0-9]{1,3})/i) || (raw as string).match(/score[:\s]*([0-9]{1,3})/i);
+                        const numeric = scoreMatch ? scoreMatch[1] : (scoreMatch2 ? scoreMatch2[1] : null);
+                        if (numeric) {
+                            const parsedNum = Math.max(0, Math.min(100, parseInt(numeric, 10)));
+                            scoreResponse = {
+                                company_name: brandName,
+                                overall_score: parsedNum,
+                                category_scores: { environment: parsedNum, labor_and_human_rights: parsedNum, animal_welfare: parsedNum, social_responsibility: parsedNum, corporate_governance: parsedNum },
+                                details: {},
+                                positives: [],
+                                negatives: [],
+                                ethical_alternative: { name: '', reason: '' },
+                                logo_url: getBrandLogo(brandName),
+                                summary: `Synthesized score from model text: ${parsedNum}`
+                            } as EthicalScoreResponse;
+                        } else {
+                            throw new Error('No valid JSON found in response');
+                        }
+                    }
+                }
+            }
+
+            if (typeof scoreResponse.overall_score !== 'number' || scoreResponse.overall_score < 0 || scoreResponse.overall_score > 100) {
+                throw new Error(`Invalid score value: ${scoreResponse.overall_score}`);
+            }
+
+            scoreResponse.logo_url = scoreResponse.logo_url || getBrandLogo(brandName);
+            scoreResponse.company_name = scoreResponse.company_name || brandName;
+
+            addSearch(brandName, scoreResponse);
+            setBrandScores(prev => ({ ...prev, [brandName]: scoreResponse }));
+            setRetryCount(prev => ({ ...prev, [brandName]: 0 }));
+        } catch (err) {
+            const message = err instanceof Error ? err.message : 'Unknown error';
+            setRetryCount(prev => ({ ...prev, [brandName]: (retryCount[brandName] || 0) + 1 }));
+            setBrandScores(prev => ({ ...prev, [brandName]: { company_name: brandName, logo_url: getBrandLogo(brandName), overall_score: -1, category_scores: {}, summary: `Error: ${message}`, positives: [], negatives: [], details: {} } as EthicalScoreResponse }));
+        } finally {
+            setLoadingScores(prev => ({ ...prev, [brandName]: false }));
+        }
+    };
+
+    const getScoreColor = (score: number): string => {
+        if (score >= 81) return COLORS.resedaGreen;
+        if (score >= 61) return COLORS.sage;
+        if (score >= 41) return COLORS.teaRose;
+        return COLORS.lightCoral;
+    };
+
+    const getScoreBackgroundColor = (score: number): string => getScoreColor(score);
+
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView 
+            style={styles.container}
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}
+        >
             <View style={styles.headerRow}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
+                <TouchableOpacity 
+                    style={styles.backButton}
+                    onPress={() => navigation.goBack()}
+                    activeOpacity={0.7}
+                    hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
                     <Ionicons name="arrow-back" size={28} color="#222" />
                 </TouchableOpacity>
                 <Text style={styles.header}>{subcategoryName}</Text>
+                <View style={styles.placeholder} />
             </View>
 
             {subcategoryData ? (
@@ -317,14 +556,23 @@ export default function CategoryDetailsScreen({ route, navigation }: Props) {
 const styles = StyleSheet.create({
     container: { 
         flex: 1, 
-        backgroundColor: COLORS.lavenderBlush 
+        backgroundColor: COLORS.lavenderBlush,
+        paddingTop: 40,
+    },
+    scrollContent: {
+        paddingBottom: 30,
     },
     headerRow: { 
         flexDirection: 'row', 
         alignItems: 'center', 
         marginBottom: 16, 
         marginTop: 16, 
-        paddingHorizontal: 16 
+        paddingHorizontal: 16,
+        justifyContent: 'space-between',
+    },
+    backButton: {
+        padding: 8,
+        borderRadius: 20,
     },
     header: { 
         fontSize: 24, 
@@ -332,6 +580,9 @@ const styles = StyleSheet.create({
         color: COLORS.darkText, 
         flex: 1, 
         textAlign: 'center' 
+    },
+    placeholder: {
+        width: 44, // Same width as back button for centering
     },
     section: {
         marginBottom: 24,
@@ -405,6 +656,116 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight: 18,
     },
+
+    /* Styles for big centered score + overlapping logo (copied from SubcategoriesScreen) */
+    brandToAvoidCard: {
+        backgroundColor: 'transparent',
+        borderRadius: 0,
+        padding: 0,
+        marginRight: 12,
+        width: 160,
+        height: 180,
+        borderWidth: 0,
+        elevation: 0,
+        shadowColor: 'transparent',
+        position: 'relative',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+    },
+    brandText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: COLORS.darkText,
+        textAlign: 'center',
+        lineHeight: 18,
+        minHeight: 36,
+    },
+    centerStack: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 8,
+    },
+    bigCircleWrap: {
+        width: 120,
+        height: 120,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    bigScoreCircle: {
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.15,
+        shadowRadius: 6,
+        elevation: 6,
+    },
+    bigScoreValue: {
+        fontSize: 40,
+        fontWeight: '700',
+        color: COLORS.white,
+    },
+    bigScoreOutOf: {
+        fontSize: 12,
+        color: 'rgba(255,255,255,0.9)',
+        marginTop: -6,
+    },
+    bigScoreLoading: {
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: COLORS.grey + '10',
+    },
+    bigScoreError: {
+        backgroundColor: COLORS.lightCoral,
+    },
+    bigScoreEmpty: {
+        backgroundColor: COLORS.grey,
+    },
+    bigQuestion: {
+        fontSize: 36,
+        fontWeight: '700',
+        color: COLORS.white,
+    },
+    brandLogoOverlay: {
+        position: 'absolute',
+        top: -12,
+        right: -12,
+        width: 56,
+        height: 56,
+        borderRadius: 28,
+        backgroundColor: COLORS.white,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 2,
+        borderColor: COLORS.grey + '20',
+    },
+    brandLogoOverlayImage: {
+        width: 48,
+        height: 48,
+        borderRadius: 24,
+        resizeMode: 'cover',
+    },
+    ethicalAlternativeCard: {
+        backgroundColor: 'transparent',
+        borderRadius: 0,
+        padding: 0,
+        marginRight: 12,
+        width: 160,
+        height: 180,
+        borderWidth: 0,
+        elevation: 0,
+        shadowColor: 'transparent',
+        position: 'relative',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+    },
     detailSection: {
         backgroundColor: '#fff',
         borderRadius: 12,
@@ -466,4 +827,3 @@ const styles = StyleSheet.create({
         opacity: 0.7,
     },
 });
-    // ...existing code...
