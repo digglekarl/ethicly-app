@@ -1,4 +1,4 @@
-import axios from 'axios';
+﻿import axios from 'axios';
 import { ethicalScoreSystemPrompt } from './ethicalScoreSystemPrompt';
 import { homeScreenSystemPrompt } from './homeScreenSystemPrompt';
 import { boycottSystemPrompt } from './boycottSystemPrompt';
